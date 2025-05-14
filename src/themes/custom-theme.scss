@@ -1,0 +1,191 @@
+// ----------------------------------------------------------
+// GLOBAL TOKENS
+// Theme Americanas
+// ----------------------------------------------------------
+
+@layer theme {
+  .theme {
+    // --------------------------------------------------------
+    // Colors (Branding Core)
+    // --------------------------------------------------------
+
+    // PALETTE
+    --fs-color-main-0: #ffebee;
+    --fs-color-main-1: #ffcdd2;
+    --fs-color-main-2: #e53935;
+    --fs-color-main-3: #d32f2f;
+    --fs-color-main-4: #b71c1c;
+
+    --fs-color-accent-0: #fff3e0;
+    --fs-color-accent-1: #ffe0b2;
+    --fs-color-accent-2: #ffb74d;
+    --fs-color-accent-3: #ff9800;
+    --fs-color-accent-4: #f57c00;
+
+    --fs-color-neutral-0: #ffffff;
+    --fs-color-neutral-1: #f5f5f5;
+    --fs-color-neutral-2: #e0e0e0;
+    --fs-color-neutral-3: #bdbdbd;
+    --fs-color-neutral-4: #9e9e9e;
+    --fs-color-neutral-5: #757575;
+    --fs-color-neutral-6: #616161;
+    --fs-color-neutral-7: #212121;
+
+    // HIERARCHY
+    --fs-color-primary-bkg: #e60014;
+    --fs-color-primary-bkg-hover: #d10012;
+    --fs-color-primary-bkg-active: #b8000f;
+    --fs-color-primary-text: var(--fs-color-neutral-0);
+
+    --fs-color-secondary-bkg: var(--fs-color-neutral-0);
+    --fs-color-secondary-text: var(--fs-color-primary-bkg);
+
+    // COMPONENTS & STATES
+    --fs-color-body-bkg: var(--fs-color-neutral-0);
+    --fs-body-bkg: var(--fs-color-body-bkg);
+
+    --fs-color-text: var(--fs-color-neutral-7);
+    --fs-color-text-light: var(--fs-color-neutral-6);
+    --fs-color-text-display: var(--fs-color-neutral-7);
+
+    --fs-color-link: var(--fs-color-primary-bkg);
+    --fs-color-link-hover: var(--fs-color-primary-bkg-hover);
+    --fs-color-link-active: var(--fs-color-primary-bkg-active);
+
+    --fs-color-action-bkg: var(--fs-color-primary-bkg);
+    --fs-color-action-bkg-hover: var(--fs-color-primary-bkg-hover);
+    --fs-color-action-bkg-active: var(--fs-color-primary-bkg-active);
+
+    --fs-color-success-bkg: #4caf50;
+    --fs-color-warning-bkg: #ff9800;
+    --fs-color-danger-bkg: #f44336;
+
+    // --------------------------------------------------------
+    // Typography (Branding Core)
+    // --------------------------------------------------------
+
+    // FACE
+    --fs-text-face-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --fs-text-face-title: var(--fs-text-face-body);
+
+    // WEIGHT
+    --fs-text-weight-regular: 400;
+    --fs-text-weight-medium: 500;
+    --fs-text-weight-bold: 700;
+
+    // SIZE
+    --fs-text-size-base: 16px;
+    --fs-text-size-0: 12px;
+    --fs-text-size-1: 14px;
+    --fs-text-size-2: var(--fs-text-size-base);
+    --fs-text-size-3: 18px;
+    --fs-text-size-4: 20px;
+    --fs-text-size-5: 24px;
+
+    // --------------------------------------------------------
+    // Spacing (UI Essentials)
+    // --------------------------------------------------------
+    --fs-spacing-0: 0.25rem;
+    --fs-spacing-1: 0.5rem;
+    --fs-spacing-2: 0.75rem;
+    --fs-spacing-3: 1rem;
+    --fs-spacing-4: 1.5rem;
+    --fs-spacing-5: 2rem;
+
+    // --------------------------------------------------------
+    // Grid & Layout (UI Essentials)
+    // --------------------------------------------------------
+    --fs-grid-padding: var(--fs-spacing-3);
+    --fs-grid-gap-0: var(--fs-spacing-1);
+    --fs-grid-gap-1: var(--fs-spacing-2);
+    --fs-grid-gap-2: var(--fs-spacing-3);
+
+    // --------------------------------------------------------
+    // Interactive Controls (UI Essentials)
+    // --------------------------------------------------------
+    --fs-control-min-height: 2.5rem;
+    --fs-control-tap-size: 2.5rem;
+
+    // --------------------------------------------------------
+    // Refinements
+    // --------------------------------------------------------
+    --fs-border-radius: 4px;
+    --fs-border-radius-pill: 100px;
+    --fs-border-width: 1px;
+    --fs-border-color: var(--fs-color-neutral-4);
+    --fs-border-color-light: var(--fs-color-neutral-2);
+
+    --fs-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --fs-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+    // --------------------------------------------------------
+    // FS UI Components
+    // --------------------------------------------------------
+    // Header & Navigation
+    [data-fs-navbar] {
+      --fs-navbar-bkg-color: var(--fs-color-primary-bkg);
+      --fs-navbar-text-color: var(--fs-color-neutral-0);
+      --fs-navbar-height: 3.5rem;
+    }
+
+    [data-fs-button] {
+      --fs-button-border-radius: var(--fs-border-radius);
+      --fs-button-padding: 0 var(--fs-spacing-3);
+      
+      // Primary button (red)
+      --fs-button-primary-text-color: var(--fs-color-neutral-0);
+      --fs-button-primary-bkg-color: var(--fs-color-primary-bkg);
+      --fs-button-primary-bkg-color-hover: var(--fs-color-primary-bkg-hover);
+      --fs-button-primary-bkg-color-active: var(--fs-color-primary-bkg-active);
+      
+      // Secondary button (white with red text)
+      --fs-button-secondary-text-color: var(--fs-color-primary-bkg);
+      --fs-button-secondary-bkg-color: var(--fs-color-neutral-0);
+      --fs-button-secondary-border-color: var(--fs-color-primary-bkg);
+    }
+
+    [data-fs-search-input] {
+      --fs-search-input-height: 2.5rem;
+      --fs-search-input-border-radius: var(--fs-border-radius);
+    }
+
+    [data-fs-badge] {
+      --fs-badge-bkg-color: var(--fs-color-primary-bkg);
+      --fs-badge-text-color: var(--fs-color-neutral-0);
+    }
+
+    [data-fs-product-card] {
+      --fs-product-card-padding: var(--fs-spacing-2);
+      --fs-product-card-bkg-color: var(--fs-color-neutral-0);
+      --fs-product-card-border-radius: var(--fs-border-radius);
+      --fs-product-card-border-color: var(--fs-color-neutral-2);
+      --fs-product-card-shadow: var(--fs-shadow);
+      --fs-product-card-shadow-hover: var(--fs-shadow-hover);
+    }
+
+    [data-fs-price] {
+      --fs-price-color: var(--fs-color-primary-bkg);
+      --fs-price-color-discount: var(--fs-color-primary-bkg);
+    }
+
+    // Banner/Promo styling
+    .section {
+      &.promo-banner {
+        background-color: var(--fs-color-primary-bkg);
+        color: var(--fs-color-neutral-0);
+        padding: var(--fs-spacing-2) 0;
+        text-align: center;
+      }
+    }
+
+    // Footer styling
+    [data-fs-footer] {
+      --fs-footer-bkg-color: var(--fs-color-neutral-1);
+      --fs-footer-text-color: var(--fs-color-neutral-7);
+      --fs-footer-border-color: var(--fs-color-neutral-3);
+    }
+
+    // Logo customization
+    --fs-logo-width: 8rem;
+  }
+}
