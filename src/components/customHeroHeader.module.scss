@@ -1,0 +1,61 @@
+.customHeroHeader {
+  .content {
+    max-width: 450px;
+    
+    .title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      text-transform: lowercase;
+    }
+    
+    .subtitle {
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+    
+    .priceContainer {
+      margin-bottom: 1.5rem;
+      
+      .price {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #fff;
+        position: relative;
+        
+        &::before {
+          content: 'R$';
+          font-size: 1rem;
+          position: absolute;
+          top: 0;
+          left: -1.5rem;
+        }
+        
+        .cents {
+          font-size: 1.2rem;
+          vertical-align: super;
+        }
+      }
+    }
+    
+    .cta {
+      display: inline-block;
+      background-color: #fff;
+      color: #ff0099;
+      padding: 0.75rem 1.5rem;
+      border-radius: 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: lowercase;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        background-color: #f0f0f0;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
