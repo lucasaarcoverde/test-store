@@ -1,0 +1,24 @@
+.customNavbar {
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  
+  [data-fs-navbar-row] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  [data-fs-navbar-buttons] {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}

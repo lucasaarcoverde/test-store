@@ -1,0 +1,24 @@
+
+  nextjs-portal {
+    display: none;
+  }
+
+  body {
+    padding: 0 !important;
+    overflow: auto !important;
+  }
+
+  // We always want to hide the following sections
+  // when customizing the FastStore, and customize
+  // them through other specialized agents.
+  .section-product-tiles {
+    display: none;
+  }
+
+  .section-incentives {
+    display: none;
+  }
+
+  .section-product-shelf > h2 {
+    display: none;
+  }

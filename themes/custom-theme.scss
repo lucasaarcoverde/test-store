@@ -1,0 +1,212 @@
+// ----------------------------------------------------------
+// GLOBAL TOKENS
+// Theme WePink
+// ----------------------------------------------------------
+
+@layer theme {
+  .theme {
+    // --------------------------------------------------------
+    // Colors (Branding Core)
+    // --------------------------------------------------------
+
+    // PALETTE
+    --fs-color-main-0: #fff0f5; // Lightest pink background
+    --fs-color-main-1: #ffcce0; // Light pink
+    --fs-color-main-2: #ff69b4; // Hot pink - primary brand color
+    --fs-color-main-3: #e6007e; // Darker pink
+    --fs-color-main-4: #cc0066; // Darkest pink
+
+    --fs-color-accent-0: #f0fff0; // Light green background
+    --fs-color-accent-1: #ccffcc; // Light green
+    --fs-color-accent-2: #00cc66; // Green - accent color
+    --fs-color-accent-3: #009933; // Darker green
+    --fs-color-accent-4: #006622; // Darkest green
+
+    --fs-color-neutral-0: #ffffff; // White
+    --fs-color-neutral-1: #f9f9f9; // Almost white
+    --fs-color-neutral-2: #f0f0f0; // Light gray
+    --fs-color-neutral-3: #e0e0e0; // Gray
+    --fs-color-neutral-4: #999999; // Medium gray
+    --fs-color-neutral-5: #666666; // Dark gray
+    --fs-color-neutral-6: #333333; // Very dark gray
+    --fs-color-neutral-7: #000000; // Black
+
+    // HIERARCHY
+    --fs-color-primary-bkg: var(--fs-color-main-2);
+    --fs-color-primary-bkg-hover: var(--fs-color-main-3);
+    --fs-color-primary-bkg-active: var(--fs-color-main-4);
+    --fs-color-primary-bkg-light: var(--fs-color-main-0);
+    --fs-color-primary-bkg-light-active: var(--fs-color-main-1);
+    --fs-color-primary-text: var(--fs-color-neutral-0);
+
+    // COMPONENTS & STATES
+    --fs-color-body-bkg: var(--fs-color-neutral-0);
+    --fs-body-bkg: var(--fs-color-body-bkg);
+
+    --fs-color-text: var(--fs-color-neutral-7);
+    --fs-color-text-light: var(--fs-color-neutral-5);
+    --fs-color-text-display: var(--fs-color-neutral-7);
+
+    --fs-color-action-bkg: var(--fs-color-main-2);
+    --fs-color-action-bkg-hover: var(--fs-color-main-3);
+    --fs-color-action-bkg-active: var(--fs-color-main-4);
+
+    --fs-color-link: var(--fs-color-main-3);
+    --fs-color-link-hover: var(--fs-color-main-4);
+    --fs-color-link-active: var(--fs-color-main-4);
+
+    // SITUATIONS
+    --fs-color-success-text: #006622;
+    --fs-color-success-bkg: #ccffcc;
+    --fs-color-warning-text: #cc6600;
+    --fs-color-warning-bkg: #ffebcc;
+    --fs-color-danger-text: #cc0000;
+    --fs-color-danger-bkg: #ffcccc;
+
+    // --------------------------------------------------------
+    // Typography (Branding Core)
+    // --------------------------------------------------------
+
+    // FACE
+    --fs-text-face-body: 'Montserrat', -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+    --fs-text-face-title: var(--fs-text-face-body);
+
+    // WEIGHT
+    --fs-text-weight-regular: 400;
+    --fs-text-weight-medium: 500;
+    --fs-text-weight-bold: 700;
+
+    // SIZE
+    --fs-text-size-base: 16px;
+    --fs-text-size-0: 12px;
+    --fs-text-size-1: 14px;
+    --fs-text-size-2: var(--fs-text-size-base);
+    --fs-text-size-3: 18px;
+    --fs-text-size-4: 20px;
+    --fs-text-size-5: 24px;
+    --fs-text-size-6: 30px;
+
+    // --------------------------------------------------------
+    // Spacing (UI Essentials)
+    // --------------------------------------------------------
+
+    --fs-spacing-0: 0.25rem;
+    --fs-spacing-1: 0.5rem;
+    --fs-spacing-2: 0.75rem;
+    --fs-spacing-3: 1rem;
+    --fs-spacing-4: 1.5rem;
+    --fs-spacing-5: 2rem;
+
+    // --------------------------------------------------------
+    // Grid & Layout (UI Essentials)
+    // --------------------------------------------------------
+
+    --fs-grid-padding: var(--fs-spacing-3);
+    --fs-grid-gap-0: var(--fs-spacing-1);
+    --fs-grid-gap-1: var(--fs-spacing-2);
+    --fs-grid-gap-2: var(--fs-spacing-3);
+
+    @include media(">=tablet") {
+      --fs-grid-padding: var(--fs-spacing-4);
+    }
+
+    // --------------------------------------------------------
+    // Refinements
+    // --------------------------------------------------------
+
+    // BORDERS
+    --fs-border-radius: 0.5rem;
+    --fs-border-radius-small: 0.25rem;
+    --fs-border-radius-pill: 100px;
+
+    --fs-border-width: 1px;
+    --fs-border-color: var(--fs-color-neutral-3);
+    --fs-border-color-hover: var(--fs-color-main-2);
+    --fs-border-color-active: var(--fs-color-main-3);
+    --fs-border-color-light: var(--fs-color-neutral-2);
+
+    // SHADOW
+    --fs-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --fs-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    // --------------------------------------------------------
+    // FS UI Components
+    // --------------------------------------------------------
+
+    // NAVBAR
+    [data-fs-navbar] {
+      --fs-navbar-height: 4rem;
+      --fs-navbar-bkg-color: var(--fs-color-neutral-0);
+      --fs-navbar-border-color: var(--fs-color-neutral-2);
+      --fs-navbar-box-shadow: var(--fs-shadow);
+    }
+
+    // LOGO
+    --fs-logo-width: 7rem;
+
+    // BUTTON
+    [data-fs-button] {
+      --fs-button-border-radius: var(--fs-border-radius-pill);
+      --fs-button-padding: 0.75rem 1.5rem;
+      --fs-button-transition: all 0.2s ease;
+
+      // Primary
+      --fs-button-primary-text-color: var(--fs-color-neutral-0);
+      --fs-button-primary-bkg-color: var(--fs-color-main-2);
+      --fs-button-primary-bkg-color-hover: var(--fs-color-main-3);
+      --fs-button-primary-bkg-color-active: var(--fs-color-main-4);
+      
+      // Secondary
+      --fs-button-secondary-text-color: var(--fs-color-main-2);
+      --fs-button-secondary-border-color: var(--fs-color-main-2);
+      --fs-button-secondary-bkg-color: transparent;
+      --fs-button-secondary-bkg-color-hover: var(--fs-color-main-0);
+    }
+
+    // PRODUCT CARD
+    [data-fs-product-card] {
+      --fs-product-card-padding: var(--fs-spacing-2);
+      --fs-product-card-bkg-color: var(--fs-color-neutral-0);
+      --fs-product-card-border-radius: var(--fs-border-radius);
+      --fs-product-card-border-color: var(--fs-color-neutral-2);
+      --fs-product-card-border-color-hover: var(--fs-color-main-1);
+      --fs-product-card-shadow: var(--fs-shadow);
+      --fs-product-card-shadow-hover: var(--fs-shadow-hover);
+      --fs-product-card-title-color: var(--fs-color-text);
+      --fs-product-card-title-size: var(--fs-text-size-2);
+      --fs-product-card-title-weight: var(--fs-text-weight-medium);
+      --fs-product-card-price-color: var(--fs-color-main-3);
+      --fs-product-card-price-size: var(--fs-text-size-3);
+      --fs-product-card-price-weight: var(--fs-text-weight-bold);
+      --fs-product-card-img-scale-hover: 1.05;
+    }
+
+    // PRICE
+    [data-fs-price] {
+      --fs-price-color: var(--fs-color-main-3);
+      --fs-price-color-listing: var(--fs-color-text-light);
+    }
+
+    // BADGE
+    [data-fs-badge] {
+      --fs-badge-bkg-color: var(--fs-color-main-2);
+      --fs-badge-text-color: var(--fs-color-neutral-0);
+      --fs-badge-border-radius: var(--fs-border-radius-pill);
+    }
+
+    // SECTION
+    .section {
+      --fs-section-padding: var(--fs-spacing-4) 0;
+      --fs-section-title-color: var(--fs-color-text-display);
+      --fs-section-title-size: var(--fs-text-size-5);
+      --fs-section-title-weight: var(--fs-text-weight-bold);
+    }
+
+    // FOOTER
+    [data-fs-footer] {
+      --fs-footer-bkg-color: var(--fs-color-neutral-1);
+      --fs-footer-text-color: var(--fs-color-text);
+      --fs-footer-border-color: var(--fs-color-neutral-3);
+    }
+  }
+}

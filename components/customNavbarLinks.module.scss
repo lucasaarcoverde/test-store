@@ -1,0 +1,45 @@
+.customNavbarLinks {
+  background-color: #fff;
+  border-top: 1px solid #f0f0f0;
+  padding: 0.5rem 0;
+
+  [data-fs-navbar-links-list] {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.875rem;
+    text-transform: lowercase;
+    white-space: nowrap;
+    padding: 0.25rem 0;
+    position: relative;
+
+    &:hover {
+      color: #ff0099;
+    }
+
+    &:hover::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #ff0099;
+    }
+  }
+}
