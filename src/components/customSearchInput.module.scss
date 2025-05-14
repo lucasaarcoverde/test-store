@@ -1,0 +1,33 @@
+.customSearchInput {
+  display: flex;
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
+  background-color: #f5f5f5;
+
+  input {
+    flex: 1;
+    border: none;
+    padding: 0.5rem 1rem;
+    outline: none;
+    background-color: transparent;
+    font-size: 0.875rem;
+  }
+
+  button {
+    background-color: transparent;
+    color: #666;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: #ff0099;
+    }
+  }
+}
