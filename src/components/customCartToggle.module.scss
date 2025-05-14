@@ -1,0 +1,20 @@
+.customCartToggle {
+  position: relative;
+
+  [data-fs-button] {
+    background: transparent;
+    color: #333;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      color: #ff0099;
+    }
+  }
+
+  [data-fs-icon] {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
