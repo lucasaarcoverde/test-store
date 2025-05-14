@@ -1,0 +1,31 @@
+.customNavbarLinks {
+  background-color: #fff;
+  border-top: 1px solid #f0f0f0;
+  padding: 0 1rem;
+  
+  .linksList {
+    display: flex;
+    justify-content: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    
+    .linksListItem {
+      margin: 0;
+      
+      a {
+        display: block;
+        padding: 0.75rem 1rem;
+        color: #666;
+        text-decoration: none;
+        font-size: 0.875rem;
+        white-space: nowrap;
+        
+        &:hover {
+          color: #ff0099;
+        }
+      }
+    }
+  }
+}
