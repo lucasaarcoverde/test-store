@@ -1,0 +1,38 @@
+.customSearchInput {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 532px;
+  height: 40px;
+  
+  input {
+    flex: 1;
+    border: none;
+    padding: 0 16px;
+    height: 100%;
+    font-size: 14px;
+    
+    &:focus {
+      outline: none;
+    }
+    
+    &::placeholder {
+      color: #999;
+    }
+  }
+  
+  button {
+    background-color: #fff;
+    border: none;
+    color: #e60014;
+    padding: 0 16px;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

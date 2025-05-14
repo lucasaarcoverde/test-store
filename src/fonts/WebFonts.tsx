@@ -1,14 +1,7 @@
-/* eslint-disable @next/next/no-page-custom-font */
+/* WebFonts from core are default,
+ * can be override by src/fonts/WebFonts from starter.store along with --fs-text-face-body token
+ */
 
-function WebFonts() {
-  return (
-    <>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
-      />
-    </>
-  )
-}
+import WebFonts from 'src/fonts/WebFonts'
 
 export default WebFonts

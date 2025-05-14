@@ -1,399 +1,191 @@
 // ----------------------------------------------------------
 // GLOBAL TOKENS
-// Custom Theme
+// Theme Americanas
 // ----------------------------------------------------------
 
-.theme {
-  // --------------------------------------------------------
-  // Colors (Branding Core)
-  // --------------------------------------------------------
-  --fs-color-main-2                                     : #0366dd;
-  --fs-color-main-3                                     : #0155b7;
-  --fs-color-main-4                                     : #014592;
+@layer theme {
+  .theme {
+    // --------------------------------------------------------
+    // Colors (Branding Core)
+    // --------------------------------------------------------
 
-  --fs-color-success-bkg                                : #e9fce3;
-  --fs-color-warning-bkg                                : #e9fce3;
-  --fs-color-danger-bkg                                 : #f7d1d1;
+    // PALETTE
+    --fs-color-main-0: #ffebee;
+    --fs-color-main-1: #ffcdd2;
+    --fs-color-main-2: #e53935;
+    --fs-color-main-3: #d32f2f;
+    --fs-color-main-4: #b71c1c;
 
-  --fs-color-primary-bkg-light                          : var(--fs-color-neutral-0);
+    --fs-color-accent-0: #fff3e0;
+    --fs-color-accent-1: #ffe0b2;
+    --fs-color-accent-2: #ffb74d;
+    --fs-color-accent-3: #ff9800;
+    --fs-color-accent-4: #f57c00;
 
-  // --------------------------------------------------------
-  // Typography (Branding Core)
-  // --------------------------------------------------------
+    --fs-color-neutral-0: #ffffff;
+    --fs-color-neutral-1: #f5f5f5;
+    --fs-color-neutral-2: #e0e0e0;
+    --fs-color-neutral-3: #bdbdbd;
+    --fs-color-neutral-4: #9e9e9e;
+    --fs-color-neutral-5: #757575;
+    --fs-color-neutral-6: #616161;
+    --fs-color-neutral-7: #212121;
 
-  // WEIGHT
-  --fs-text-weight-bold                                 : 600;
-  --fs-text-weight-black                                : 700;
+    // HIERARCHY
+    --fs-color-primary-bkg: #e60014;
+    --fs-color-primary-bkg-hover: #d10012;
+    --fs-color-primary-bkg-active: #b8000f;
+    --fs-color-primary-text: var(--fs-color-neutral-0);
 
-  // FACE
-  --fs-text-face-body                                   : "Inter", -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+    --fs-color-secondary-bkg: var(--fs-color-neutral-0);
+    --fs-color-secondary-text: var(--fs-color-primary-bkg);
 
-  // HIERARCHY SCALE
-  --fs-text-size-title-huge                             : var(--fs-text-size-9);
+    // COMPONENTS & STATES
+    --fs-color-body-bkg: var(--fs-color-neutral-0);
+    --fs-body-bkg: var(--fs-color-body-bkg);
 
-  // --------------------------------------------------------
-  // Spacing (UI Essentials)
-  // --------------------------------------------------------
+    --fs-color-text: var(--fs-color-neutral-7);
+    --fs-color-text-light: var(--fs-color-neutral-6);
+    --fs-color-text-display: var(--fs-color-neutral-7);
 
-  // --------------------------------------------------------
-  // Grid & Layout (UI Essentials)
-  // --------------------------------------------------------
+    --fs-color-link: var(--fs-color-primary-bkg);
+    --fs-color-link-hover: var(--fs-color-primary-bkg-hover);
+    --fs-color-link-active: var(--fs-color-primary-bkg-active);
 
-  // PADDING
+    --fs-color-action-bkg: var(--fs-color-primary-bkg);
+    --fs-color-action-bkg-hover: var(--fs-color-primary-bkg-hover);
+    --fs-color-action-bkg-active: var(--fs-color-primary-bkg-active);
 
-  @include media(">=notebook") {
-    --fs-grid-padding                                   : var(--fs-spacing-6);
-  }
+    --fs-color-success-bkg: #4caf50;
+    --fs-color-warning-bkg: #ff9800;
+    --fs-color-danger-bkg: #f44336;
 
-  // CONTAINER
-  --fs-grid-max-width                                   : 1320px;
+    // --------------------------------------------------------
+    // Typography (Branding Core)
+    // --------------------------------------------------------
 
-  // --------------------------------------------------------
-  // Interactive Controls (UI Essentials)
-  // --------------------------------------------------------
+    // FACE
+    --fs-text-face-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --fs-text-face-title: var(--fs-text-face-body);
 
-  // --------------------------------------------------------
-  // Refinements
-  // --------------------------------------------------------
+    // WEIGHT
+    --fs-text-weight-regular: 400;
+    --fs-text-weight-medium: 500;
+    --fs-text-weight-bold: 700;
 
-  // BORDERS
-  --fs-border-color                                     : var(--fs-color-neutral-2);
+    // SIZE
+    --fs-text-size-base: 16px;
+    --fs-text-size-0: 12px;
+    --fs-text-size-1: 14px;
+    --fs-text-size-2: var(--fs-text-size-base);
+    --fs-text-size-3: 18px;
+    --fs-text-size-4: 20px;
+    --fs-text-size-5: 24px;
 
-  --fs-border-radius                                    : 4px;
+    // --------------------------------------------------------
+    // Spacing (UI Essentials)
+    // --------------------------------------------------------
+    --fs-spacing-0: 0.25rem;
+    --fs-spacing-1: 0.5rem;
+    --fs-spacing-2: 0.75rem;
+    --fs-spacing-3: 1rem;
+    --fs-spacing-4: 1.5rem;
+    --fs-spacing-5: 2rem;
 
-  // --------------------------------------------------------
-  // FS UI Components
-  // --------------------------------------------------------
+    // --------------------------------------------------------
+    // Grid & Layout (UI Essentials)
+    // --------------------------------------------------------
+    --fs-grid-padding: var(--fs-spacing-3);
+    --fs-grid-gap-0: var(--fs-spacing-1);
+    --fs-grid-gap-1: var(--fs-spacing-2);
+    --fs-grid-gap-2: var(--fs-spacing-3);
 
-  .section {
-    ////////////////////
-    // Global
-    ////////////////////
+    // --------------------------------------------------------
+    // Interactive Controls (UI Essentials)
+    // --------------------------------------------------------
+    --fs-control-min-height: 2.5rem;
+    --fs-control-tap-size: 2.5rem;
+
+    // --------------------------------------------------------
+    // Refinements
+    // --------------------------------------------------------
+    --fs-border-radius: 4px;
+    --fs-border-radius-pill: 100px;
+    --fs-border-width: 1px;
+    --fs-border-color: var(--fs-color-neutral-4);
+    --fs-border-color-light: var(--fs-color-neutral-2);
+
+    --fs-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --fs-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+    // --------------------------------------------------------
+    // FS UI Components
+    // --------------------------------------------------------
+    // Header & Navigation
+    [data-fs-navbar] {
+      --fs-navbar-bkg-color: var(--fs-color-primary-bkg);
+      --fs-navbar-text-color: var(--fs-color-neutral-0);
+      --fs-navbar-height: 3.5rem;
+    }
 
     [data-fs-button] {
-      --fs-button-padding                               : calc(var(--fs-spacing-1) - (var(--fs-button-border-width) * 2)) var(--fs-spacing-4);
-
-      --fs-button-border-radius                         : var(--fs-border-radius-pill);
-      --fs-button-border-width                          : var(--fs-border-width);
-
-      --fs-buy-button-bkg-color                         : var(--fs-button-primary-bkg-color);
-      --fs-buy-button-bkg-color-hover                   : var(--fs-button-primary-bkg-color-hover);
-      --fs-buy-button-bkg-color-active                  : var(--fs-button-primary-bkg-color-active);
-
-      --fs-button-secondary-text-color-hover            : var(--fs-color-secondary-text);
-      --fs-button-secondary-bkg-color-hover             : var(--fs-color-neutral-1);
-      --fs-button-secondary-bkg-color-active            : var(--fs-color-neutral-2);
-      --fs-button-secondary-border-color                : var(--fs-border-color);
-
-      --fs-button-secondary-inverse-text-color          : var(--fs-color-text-inverse);
-      --fs-button-secondary-inverse-text-color-hover    : var(--fs-button-secondary-inverse-text-color);
-
-      --fs-button-secondary-inverse-bkg-color-hover     : #ffffff50;
-      --fs-button-secondary-inverse-bkg-color-active    : #ffffff60;
-
-      --fs-button-secondary-inverse-border-color        : var(--fs-button-secondary-inverse-bkg-color-hover);
-      --fs-button-secondary-inverse-border-color-hover  : transparent;
-      --fs-button-secondary-inverse-border-color-active : transparent;
+      --fs-button-border-radius: var(--fs-border-radius);
+      --fs-button-padding: 0 var(--fs-spacing-3);
+      
+      // Primary button (red)
+      --fs-button-primary-text-color: var(--fs-color-neutral-0);
+      --fs-button-primary-bkg-color: var(--fs-color-primary-bkg);
+      --fs-button-primary-bkg-color-hover: var(--fs-color-primary-bkg-hover);
+      --fs-button-primary-bkg-color-active: var(--fs-color-primary-bkg-active);
+      
+      // Secondary button (white with red text)
+      --fs-button-secondary-text-color: var(--fs-color-primary-bkg);
+      --fs-button-secondary-bkg-color: var(--fs-color-neutral-0);
+      --fs-button-secondary-border-color: var(--fs-color-primary-bkg);
     }
 
-    [data-fs-input] {
-      --fs-input-height                                 : 56px;
-      --fs-input-border-radius                          : var(--fs-border-radius);
+    [data-fs-search-input] {
+      --fs-search-input-height: 2.5rem;
+      --fs-search-input-border-radius: var(--fs-border-radius);
     }
 
-    [data-fs-input-field] {
-      --fs-input-field-padding                          : var(--fs-spacing-2) var(--fs-spacing-2) 0;
-      --fs-input-field-label-padding                    : 0 var(--fs-spacing-2);
-      --fs-input-field-button-height                    : 56px;
-
-      [data-fs-button] { min-width: var(--fs-input-field-button-height); }
-      input:not(:placeholder-shown) + label, &:focus + label { top: rem(9px); }
-    }
-
-    [data-fs-quantity-selector] {
-      --fs-qty-selector-border-radius                   : var(--fs-border-radius-pill);
-    }
-
-    [data-fs-navbar-header] {
-      [data-fs-button-wrapper], [data-fs-button-icon] {
-        color: var(--fs-color-text-display);
-      }
-    }
-
-    [data-fs-carousel] {
-      --fs-carousel-controls-box-shadow                 : none;
-      --fs-carousel-controls-bkg-color                  : var(--fs-color-neutral-7);
-      --fs-carousel-controls-icon-color                 : var(--fs-color-text-inverse);
-      --fs-carousel-bullet-bkg-color-selected           : var(--fs-color-neutral-7);
-      --fs-carousel-item-margin-right                   : var(--fs-spacing-5);
-
-      [data-fs-button]:disabled [data-fs-button-wrapper] { background-color: var(--fs-color-neutral-1); }
-    }
-
-    [data-fs-alert] {
-      --fs-alert-bkg-color                              : var(--fs-color-neutral-7);
-      --fs-alert-text-color                             : var(--fs-color-text-inverse);
-    }
-
-    [data-fs-incentives] {
-      [data-fs-list] {
-        padding: 0 var(--fs-grid-padding);
-      }
-
-      @include media(">=notebook") {
-        --fs-incentives-gap                               : var(--fs-spacing-6);
-      }
+    [data-fs-badge] {
+      --fs-badge-bkg-color: var(--fs-color-primary-bkg);
+      --fs-badge-text-color: var(--fs-color-neutral-0);
     }
 
     [data-fs-product-card] {
-      --fs-product-card-wide-content-padding            : 0;
-      --fs-product-card-border-width                    : 0;
-      --fs-product-card-title-weight                    : var(--fs-text-weight-semibold);
-      --fs-product-card-wide-bkg-color                  : transparent;
-      --fs-product-card-padding                         : 0 0 var(--fs-spacing-2) 0;
-
-      --fs-product-card-shadow-hover                    : none;
-
-      [data-fs-product-card-prices] {
-        column-gap: var(--fs-grid-gap-0);
-      }
-
-      @media (hover: hover) {
-        &:hover {
-          [data-fs-product-card-image] img { opacity: .8; }
-        }
-      }
+      --fs-product-card-padding: var(--fs-spacing-2);
+      --fs-product-card-bkg-color: var(--fs-color-neutral-0);
+      --fs-product-card-border-radius: var(--fs-border-radius);
+      --fs-product-card-border-color: var(--fs-color-neutral-2);
+      --fs-product-card-shadow: var(--fs-shadow);
+      --fs-product-card-shadow-hover: var(--fs-shadow-hover);
     }
 
-    [data-fs-product-card-variant="wide"] {
-      --fs-product-card-title-size                      : var(--fs-text-size-title-product);
-      [data-fs-image] { border-radius: var(--fs-border-radius); }
-      [data-fs-product-card-title] { letter-spacing: -1.1px; }
+    [data-fs-price] {
+      --fs-price-color: var(--fs-color-primary-bkg);
+      --fs-price-color-discount: var(--fs-color-primary-bkg);
     }
 
-    ////////////////////
-    // HOMEPAGE
-    ////////////////////
-
-    [data-fs-hero] {
-      @include layout-content;
-
-      &[data-fs-hero-variant="primary"] [data-fs-hero-heading] {
-        @include media(">=notebook") {
-          padding: var(--fs-spacing-13) var(--fs-spacing-5);
-        }
+    // Banner/Promo styling
+    .section {
+      &.promo-banner {
+        background-color: var(--fs-color-primary-bkg);
+        color: var(--fs-color-neutral-0);
+        padding: var(--fs-spacing-2) 0;
+        text-align: center;
       }
     }
 
-    [data-fs-tiles] {
-      --fs-tiles-gap-notebook                          : var(--fs-grid-gap-4);
-      --fs-tiles-gap-mobile                            : var(--fs-grid-gap-4);
-
-      [data-fs-product-card-image] {
-        aspect-ratio: 1;
-      }
-
-      [data-fs-tile] > * {
-        @include media(">=notebook") {
-          grid-auto-rows: 640px auto;
-        }
-      }
+    // Footer styling
+    [data-fs-footer] {
+      --fs-footer-bkg-color: var(--fs-color-neutral-1);
+      --fs-footer-text-color: var(--fs-color-neutral-7);
+      --fs-footer-border-color: var(--fs-color-neutral-3);
     }
 
-    [data-fs-newsletter-color-variant="light"] {
-      --fs-newsletter-light-bkg-color                      : transparent;
-
-      max-width: 670px;
-
-      [data-fs-newsletter-addendum] {
-        [data-fs-link] { color: var(--fs-color-link); }
-      }
-
-      [data-fs-button-inverse="true"] [data-fs-button-wrapper] {
-        color: var(--fs-color-link);
-        border-color: var(--fs-border-color);
-      }
-    }
-
-    ////////////////////
-    // PDP
-    ////////////////////
-
-    [data-fs-product-title] {
-      --fs-product-title-text-size                      : var(--fs-text-size-6);
-      --fs-product-title-text-weight                    : var(--fs-text-weight-semibold);
-    }
-
-    [data-fs-product-details-title] {
-      padding-top: 0;
-      border-top: none;
-    }
-
-    [data-fs-product-details] {
-      --fs-product-details-vertical-spacing              : var(--fs-spacing-5);
-      --fs-product-details-horizontal-spacing            : var(--fs-spacing-6);
-
-      [data-fs-product-details-section] {
-        padding-right: 0;
-        padding-left: 0;
-        border-right: none;
-        border-left: none;
-      }
-    }
-
-    [data-fs-sku-selector] {
-      --fs-sku-selector-image-border-radius                : var(--fs-border-radius-circle);
-      --fs-sku-selector-option-border-radius               : var(--fs-border-radius-circle);
-      --fs-sku-selector-option-border-color                : var(--fs-border-color);
-    }
-
-    [data-fs-image-gallery] > [data-fs-image] {
-      object-fit: cover;
-
-      @include media("<notebook") {
-        height: 280px;
-      }
-    }
-
-    [data-fs-image-gallery-selector-control-button] {
-      --fs-image-gallery-selector-control-bkg-color        : var(--fs-color-neutral-7);
-      --fs-image-gallery-selector-control-shadow           : none;
-
-      [data-fs-button-wrapper] {
-        color: var(--fs-color-text-inverse);
-      }
-
-      &:hover [data-fs-button-wrapper] {
-        background-color: var(--fs-image-gallery-selector-control-bkg-color);
-      }
-    }
-
-    ////////////////////
-    // PLP
-    ////////////////////
-
-    [data-fs-hero-variant="secondary"] {
-      --fs-hero-light-bkg-color                            : transparent;
-      --fs-hero-secondary-title-size                       : var(--fs-text-size-9);
-      --fs-hero-secondary-image-height-mobile              : unset;
-      --fs-hero-secondary-image-height-desktop             : unset;
-
-      [data-fs-hero-image] { display: none; }
-      [data-fs-hero-wrapper] { margin: 0; }
-      [data-fs-hero-subtitle] { color: var(--fs-color-text-light); }
-      [data-fs-hero-title] { letter-spacing: 1.1; }
-    }
-
-    [data-fs-product-grid] {
-      --fs-product-grid-gap-mobile                         : var(--fs-grid-gap-2);
-      --fs-product-grid-gap-desktop                        : var(--fs-spacing-6);
-    }
-
-    [data-fs-product-listing] {
-      [data-fs-product-listing-results],
-      [data-fs-product-listing-results-count] { background-color: transparent; }
-
-      [data-fs-product-listing-results] {
-        --padding: var(--fs-grid-gap-2);
-      }
-
-      [data-fs-product-listing-results-count] {
-        color: var(--fs-color-text-light);
-      }
-    }
-
-    [data-fs-product-listing-content-grid] {
-      column-gap: var(--fs-spacing-6);
-
-      @include media(">=notebook") { row-gap: var(--fs-spacing-3); }
-    }
-
-    [data-fs-filter] {
-      --fs-filter-accordion-button-padding-right-notebook     : 0;
-      --fs-filter-accordion-item-panel-padding-right-notebook : 0;
-      --fs-filter-accordion-border-radius-notebook            : 0;
-      --fs-filter-title-margin-bottom                         : var(--fs-spacing-3);
-
-      [data-fs-filter-title] {
-        font-weight: var(--fs-text-weight-semibold);
-      }
-
-      [data-fs-filter-accordion] {
-        border-right: 0;
-        border-bottom: 0;
-        border-left: 0;
-      }
-    }
-
-    [data-fs-slider] {
-      --fs-slider-thumb-bkg-color                          : var(--fs-color-neutral-7);
-    }
-
-    ////////////////////
-    // Cart Sidebar
-    ////////////////////
-
-    [data-fs-cart-sidebar] {
-      --fs-cart-sidebar-bkg-color                          : var(--fs-color-neutral-0);
-      --fs-cart-sidebar-footer-box-shadow                  : none;
-      --fs-slide-over-partial-max-width-notebook           : 480px;
-
-      @include media(">=notebook") {
-        --fs-cart-sidebar-list-padding                       : var(--fs-spacing-3) var(--fs-spacing-7);
-        --fs-slide-over-header-padding                       : var(--fs-spacing-2) var(--fs-spacing-7);
-      }
-
-      [data-fs-empty-state] {
-        --fs-empty-state-bkg-color-default                   : var(--fs-color-neutral-0);
-      }
-
-      [data-fs-slide-over-header] [data-fs-button-wrapper] {
-        color: var(--fs-color-text);
-      }
-    }
-
-    [data-fs-cart-sidebar-footer] {
-      @include media(">=notebook") {
-        padding: 0 var(--fs-spacing-7) var(--fs-spacing-4);
-      }
-
-      [data-fs-order-summary] {
-        --fs-order-summary-row-gap                           : var(--fs-grid-gap-0);
-
-        padding-top: var(--fs-spacing-4);
-        margin-bottom: var(--fs-spacing-3);
-        border-top: var(--fs-border-width) solid var(--fs-border-color);
-      }
-    }
-
-    [data-fs-cart-item] {
-      --fs-cart-item-border-width : 0;
-
-      [data-fs-cart-item-content] {
-        padding-bottom: var(--fs-spacing-4);
-        padding-left: 0;
-      }
-
-      [data-quantity-selector-input] {
-        border-color: var(--fs-border-color);
-        border-top-left-radius: var(--fs-border-radius-pill);
-        border-top-right-radius: var(--fs-border-radius-pill);
-      }
-    }
-
-    [data-fs-cart-sidebar-list] li {
-      padding-bottom: var(--fs-spacing-4);
-      &:not(:only-child) { border-bottom: var(--fs-border-width) solid var(--fs-border-color); }
-    }
-
-    ///////////////////
-
-    .text__title-section {
-      font-size: var(--fs-text-size-6);
-      font-weight: var(--fs-text-weight-semibold);
-      letter-spacing: -1.2px;
-    }
+    // Logo customization
+    --fs-logo-width: 8rem;
   }
-
-  .section-banner + .section-newsletter { background-color: var(--fs-color-neutral-bkg); }
 }

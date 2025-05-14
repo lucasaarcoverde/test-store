@@ -1,0 +1,91 @@
+.customRegionBar {
+  background-color: #fff;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: sans-serif;
+  
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .regionText {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .inputLabel {
+    font-size: 0.75rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+  }
+  
+  .inputWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.25rem;
+  }
+  
+  .cepInput {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    width: 180px;
+    height: 38px;
+    margin-right: 0.5rem;
+  }
+  
+  .okButton {
+    background-color: #e60014;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    height: 38px;
+    width: 50px;
+  }
+  
+  .notMyCep {
+    font-size: 0.75rem;
+    color: #666;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M5 5v14h14V5H5zm12 12H7V7h10v10zm-1-5h-4v4h-2v-4H6v-2h4V6h2v4h4v2z'/%3E%3C/svg%3E");
+      background-size: contain;
+      margin-left: 4px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .customRegionBar {
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .regionText {
+      margin-bottom: 0;
+    }
+  }
+}
