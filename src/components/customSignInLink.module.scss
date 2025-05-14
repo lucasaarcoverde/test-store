@@ -1,0 +1,22 @@
+.customSignInLink {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  
+  .signInButton, .registerButton {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #666;
+    text-decoration: none;
+    
+    &:hover {
+      color: #ff0099;
+    }
+  }
+  
+  .divider {
+    margin: 0 0.5rem;
+    color: #e5e5e5;
+  }
+}
