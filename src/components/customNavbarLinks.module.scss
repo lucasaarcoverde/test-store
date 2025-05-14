@@ -1,0 +1,23 @@
+.customNavbarLinks {
+  display: flex;
+  
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+    
+    li {
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
