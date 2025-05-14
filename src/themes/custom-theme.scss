@@ -1,399 +1,190 @@
 // ----------------------------------------------------------
 // GLOBAL TOKENS
-// Custom Theme
+// Theme WePink
 // ----------------------------------------------------------
 
-.theme {
-  // --------------------------------------------------------
-  // Colors (Branding Core)
-  // --------------------------------------------------------
-  --fs-color-main-2                                     : #0366dd;
-  --fs-color-main-3                                     : #0155b7;
-  --fs-color-main-4                                     : #014592;
+@layer theme {
+  .theme {
+    // --------------------------------------------------------
+    // Colors (Branding Core)
+    // --------------------------------------------------------
 
-  --fs-color-success-bkg                                : #e9fce3;
-  --fs-color-warning-bkg                                : #e9fce3;
-  --fs-color-danger-bkg                                 : #f7d1d1;
+    // PALETTE
+    --fs-color-main-0: #fff0f5; // Lightest pink background
+    --fs-color-main-1: #ffcce0; // Light pink
+    --fs-color-main-2: #ff69b4; // Hot pink - primary brand color
+    --fs-color-main-3: #e6007e; // Darker pink
+    --fs-color-main-4: #cc0066; // Darkest pink
 
-  --fs-color-primary-bkg-light                          : var(--fs-color-neutral-0);
+    --fs-color-accent-0: #f0fff0; // Light green background
+    --fs-color-accent-1: #ccffcc; // Light green
+    --fs-color-accent-2: #00cc66; // Green accent color
+    --fs-color-accent-3: #009933; // Darker green
+    --fs-color-accent-4: #006622; // Darkest green
 
-  // --------------------------------------------------------
-  // Typography (Branding Core)
-  // --------------------------------------------------------
+    --fs-color-neutral-0: #ffffff; // White
+    --fs-color-neutral-1: #f9f9f9; // Almost white
+    --fs-color-neutral-2: #f0f0f0; // Light gray
+    --fs-color-neutral-3: #e0e0e0; // Medium light gray
+    --fs-color-neutral-4: #cccccc; // Medium gray
+    --fs-color-neutral-5: #999999; // Medium dark gray
+    --fs-color-neutral-6: #666666; // Dark gray
+    --fs-color-neutral-7: #333333; // Almost black
 
-  // WEIGHT
-  --fs-text-weight-bold                                 : 600;
-  --fs-text-weight-black                                : 700;
+    // HIERARCHY
+    --fs-color-primary-bkg: var(--fs-color-main-2);
+    --fs-color-primary-bkg-hover: var(--fs-color-main-3);
+    --fs-color-primary-bkg-active: var(--fs-color-main-4);
+    --fs-color-primary-bkg-light: var(--fs-color-main-0);
+    --fs-color-primary-bkg-light-active: var(--fs-color-main-1);
+    --fs-color-primary-text: var(--fs-color-neutral-0);
 
-  // FACE
-  --fs-text-face-body                                   : "Inter", -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+    // COMPONENTS & STATES
+    --fs-color-body-bkg: var(--fs-color-neutral-0);
+    --fs-body-bkg: var(--fs-color-body-bkg);
 
-  // HIERARCHY SCALE
-  --fs-text-size-title-huge                             : var(--fs-text-size-9);
+    --fs-color-text-display: var(--fs-color-main-4);
+    --fs-color-text: var(--fs-color-neutral-7);
+    --fs-color-text-light: var(--fs-color-neutral-6);
 
-  // --------------------------------------------------------
-  // Spacing (UI Essentials)
-  // --------------------------------------------------------
+    --fs-color-action-bkg: var(--fs-color-main-2);
+    --fs-color-action-bkg-hover: var(--fs-color-main-3);
+    --fs-color-action-bkg-active: var(--fs-color-main-4);
 
-  // --------------------------------------------------------
-  // Grid & Layout (UI Essentials)
-  // --------------------------------------------------------
+    --fs-color-link: var(--fs-color-main-3);
+    --fs-color-link-hover: var(--fs-color-main-4);
+    --fs-color-link-active: var(--fs-color-main-4);
 
-  // PADDING
+    // SITUATIONS
+    --fs-color-success-text: #006622;
+    --fs-color-success-bkg: #ccffcc;
+    --fs-color-warning-text: #cc6600;
+    --fs-color-warning-bkg: #ffebcc;
+    --fs-color-danger-text: #cc0000;
+    --fs-color-danger-bkg: #ffcccc;
 
-  @include media(">=notebook") {
-    --fs-grid-padding                                   : var(--fs-spacing-6);
-  }
+    // --------------------------------------------------------
+    // Typography (Branding Core)
+    // --------------------------------------------------------
 
-  // CONTAINER
-  --fs-grid-max-width                                   : 1320px;
+    // FACE
+    --fs-text-face-body: 'Montserrat', -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+    --fs-text-face-title: var(--fs-text-face-body);
 
-  // --------------------------------------------------------
-  // Interactive Controls (UI Essentials)
-  // --------------------------------------------------------
+    // WEIGHT
+    --fs-text-weight-regular: 400;
+    --fs-text-weight-medium: 500;
+    --fs-text-weight-bold: 700;
 
-  // --------------------------------------------------------
-  // Refinements
-  // --------------------------------------------------------
+    // SIZE
+    --fs-text-size-base: 16px;
+    --fs-text-size-0: 12px;
+    --fs-text-size-1: 14px;
+    --fs-text-size-2: var(--fs-text-size-base);
+    --fs-text-size-3: 18px;
+    --fs-text-size-4: 20px;
+    --fs-text-size-5: 24px;
+    --fs-text-size-6: 30px;
 
-  // BORDERS
-  --fs-border-color                                     : var(--fs-color-neutral-2);
+    // --------------------------------------------------------
+    // Spacing (UI Essentials)
+    // --------------------------------------------------------
 
-  --fs-border-radius                                    : 4px;
+    --fs-spacing-3: 1rem;
+    --fs-grid-gap-2: var(--fs-spacing-3);
 
-  // --------------------------------------------------------
-  // FS UI Components
-  // --------------------------------------------------------
+    // --------------------------------------------------------
+    // Grid & Layout (UI Essentials)
+    // --------------------------------------------------------
 
-  .section {
-    ////////////////////
-    // Global
-    ////////////////////
+    --fs-grid-padding: var(--fs-spacing-3);
 
+    // --------------------------------------------------------
+    // Interactive Controls (UI Essentials)
+    // --------------------------------------------------------
+
+    // --------------------------------------------------------
+    // Refinements
+    // --------------------------------------------------------
+
+    // BORDERS
+    --fs-border-radius: 8px;
+    --fs-border-radius-pill: 100px;
+    --fs-border-width: 1px;
+    --fs-border-color: var(--fs-color-neutral-4);
+    --fs-border-color-light: var(--fs-color-neutral-3);
+
+    // SHADOW
+    --fs-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --fs-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    // --------------------------------------------------------
+    // FS UI Components
+    // --------------------------------------------------------
+
+    // LOGO
+    --fs-logo-width: 7rem;
+
+    // NAVBAR
+    [data-fs-navbar] {
+      --fs-navbar-bkg-color: var(--fs-color-neutral-0);
+      --fs-navbar-padding: 0.5rem var(--fs-grid-padding);
+    }
+
+    // BUTTON
     [data-fs-button] {
-      --fs-button-padding                               : calc(var(--fs-spacing-1) - (var(--fs-button-border-width) * 2)) var(--fs-spacing-4);
-
-      --fs-button-border-radius                         : var(--fs-border-radius-pill);
-      --fs-button-border-width                          : var(--fs-border-width);
-
-      --fs-buy-button-bkg-color                         : var(--fs-button-primary-bkg-color);
-      --fs-buy-button-bkg-color-hover                   : var(--fs-button-primary-bkg-color-hover);
-      --fs-buy-button-bkg-color-active                  : var(--fs-button-primary-bkg-color-active);
-
-      --fs-button-secondary-text-color-hover            : var(--fs-color-secondary-text);
-      --fs-button-secondary-bkg-color-hover             : var(--fs-color-neutral-1);
-      --fs-button-secondary-bkg-color-active            : var(--fs-color-neutral-2);
-      --fs-button-secondary-border-color                : var(--fs-border-color);
-
-      --fs-button-secondary-inverse-text-color          : var(--fs-color-text-inverse);
-      --fs-button-secondary-inverse-text-color-hover    : var(--fs-button-secondary-inverse-text-color);
-
-      --fs-button-secondary-inverse-bkg-color-hover     : #ffffff50;
-      --fs-button-secondary-inverse-bkg-color-active    : #ffffff60;
-
-      --fs-button-secondary-inverse-border-color        : var(--fs-button-secondary-inverse-bkg-color-hover);
-      --fs-button-secondary-inverse-border-color-hover  : transparent;
-      --fs-button-secondary-inverse-border-color-active : transparent;
-    }
-
-    [data-fs-input] {
-      --fs-input-height                                 : 56px;
-      --fs-input-border-radius                          : var(--fs-border-radius);
-    }
-
-    [data-fs-input-field] {
-      --fs-input-field-padding                          : var(--fs-spacing-2) var(--fs-spacing-2) 0;
-      --fs-input-field-label-padding                    : 0 var(--fs-spacing-2);
-      --fs-input-field-button-height                    : 56px;
-
-      [data-fs-button] { min-width: var(--fs-input-field-button-height); }
-      input:not(:placeholder-shown) + label, &:focus + label { top: rem(9px); }
-    }
-
-    [data-fs-quantity-selector] {
-      --fs-qty-selector-border-radius                   : var(--fs-border-radius-pill);
-    }
-
-    [data-fs-navbar-header] {
-      [data-fs-button-wrapper], [data-fs-button-icon] {
-        color: var(--fs-color-text-display);
+      --fs-button-border-radius: var(--fs-border-radius-pill);
+      --fs-button-padding: 0.5rem 1.5rem;
+      --fs-button-shadow: var(--fs-shadow);
+      --fs-button-shadow-hover: var(--fs-shadow-hover);
+      
+      &[data-fs-button-variant="primary"] {
+        --fs-button-text-color: var(--fs-color-neutral-0);
+        --fs-button-text-color-hover: var(--fs-color-neutral-0);
+        --fs-button-bkg-color: var(--fs-color-main-2);
+        --fs-button-bkg-color-hover: var(--fs-color-main-3);
+        --fs-button-border-color: transparent;
+        --fs-button-border-color-hover: transparent;
       }
     }
 
-    [data-fs-carousel] {
-      --fs-carousel-controls-box-shadow                 : none;
-      --fs-carousel-controls-bkg-color                  : var(--fs-color-neutral-7);
-      --fs-carousel-controls-icon-color                 : var(--fs-color-text-inverse);
-      --fs-carousel-bullet-bkg-color-selected           : var(--fs-color-neutral-7);
-      --fs-carousel-item-margin-right                   : var(--fs-spacing-5);
-
-      [data-fs-button]:disabled [data-fs-button-wrapper] { background-color: var(--fs-color-neutral-1); }
-    }
-
-    [data-fs-alert] {
-      --fs-alert-bkg-color                              : var(--fs-color-neutral-7);
-      --fs-alert-text-color                             : var(--fs-color-text-inverse);
-    }
-
-    [data-fs-incentives] {
-      [data-fs-list] {
-        padding: 0 var(--fs-grid-padding);
-      }
-
-      @include media(">=notebook") {
-        --fs-incentives-gap                               : var(--fs-spacing-6);
-      }
-    }
-
+    // PRODUCT CARD
     [data-fs-product-card] {
-      --fs-product-card-wide-content-padding            : 0;
-      --fs-product-card-border-width                    : 0;
-      --fs-product-card-title-weight                    : var(--fs-text-weight-semibold);
-      --fs-product-card-wide-bkg-color                  : transparent;
-      --fs-product-card-padding                         : 0 0 var(--fs-spacing-2) 0;
-
-      --fs-product-card-shadow-hover                    : none;
-
-      [data-fs-product-card-prices] {
-        column-gap: var(--fs-grid-gap-0);
-      }
-
-      @media (hover: hover) {
-        &:hover {
-          [data-fs-product-card-image] img { opacity: .8; }
-        }
-      }
+      --fs-product-card-padding: var(--fs-spacing-3);
+      --fs-product-card-bkg-color: var(--fs-color-neutral-0);
+      --fs-product-card-border-radius: var(--fs-border-radius);
+      --fs-product-card-border-color: var(--fs-color-neutral-3);
+      --fs-product-card-shadow: var(--fs-shadow);
+      --fs-product-card-shadow-hover: var(--fs-shadow-hover);
+      --fs-product-card-title-color: var(--fs-color-text);
+      --fs-product-card-title-size: var(--fs-text-size-2);
+      --fs-product-card-title-weight: var(--fs-text-weight-medium);
+      --fs-product-card-price-color: var(--fs-color-main-3);
+      --fs-product-card-price-size: var(--fs-text-size-3);
+      --fs-product-card-price-weight: var(--fs-text-weight-bold);
     }
 
-    [data-fs-product-card-variant="wide"] {
-      --fs-product-card-title-size                      : var(--fs-text-size-title-product);
-      [data-fs-image] { border-radius: var(--fs-border-radius); }
-      [data-fs-product-card-title] { letter-spacing: -1.1px; }
+    // PRICE
+    [data-fs-price] {
+      --fs-price-color: var(--fs-color-main-3);
+      --fs-price-color-listing: var(--fs-color-text-light);
     }
 
-    ////////////////////
-    // HOMEPAGE
-    ////////////////////
-
+    // HERO
     [data-fs-hero] {
-      @include layout-content;
-
-      &[data-fs-hero-variant="primary"] [data-fs-hero-heading] {
-        @include media(">=notebook") {
-          padding: var(--fs-spacing-13) var(--fs-spacing-5);
-        }
-      }
+      --fs-hero-main-bkg-color: var(--fs-color-main-4);
+      --fs-hero-content-text-color: var(--fs-color-neutral-0);
+      --fs-hero-title-size: var(--fs-text-size-6);
+      --fs-hero-title-weight: var(--fs-text-weight-bold);
     }
 
-    [data-fs-tiles] {
-      --fs-tiles-gap-notebook                          : var(--fs-grid-gap-4);
-      --fs-tiles-gap-mobile                            : var(--fs-grid-gap-4);
-
-      [data-fs-product-card-image] {
-        aspect-ratio: 1;
-      }
-
-      [data-fs-tile] > * {
-        @include media(">=notebook") {
-          grid-auto-rows: 640px auto;
-        }
-      }
-    }
-
-    [data-fs-newsletter-color-variant="light"] {
-      --fs-newsletter-light-bkg-color                      : transparent;
-
-      max-width: 670px;
-
-      [data-fs-newsletter-addendum] {
-        [data-fs-link] { color: var(--fs-color-link); }
-      }
-
-      [data-fs-button-inverse="true"] [data-fs-button-wrapper] {
-        color: var(--fs-color-link);
-        border-color: var(--fs-border-color);
-      }
-    }
-
-    ////////////////////
-    // PDP
-    ////////////////////
-
-    [data-fs-product-title] {
-      --fs-product-title-text-size                      : var(--fs-text-size-6);
-      --fs-product-title-text-weight                    : var(--fs-text-weight-semibold);
-    }
-
-    [data-fs-product-details-title] {
-      padding-top: 0;
-      border-top: none;
-    }
-
-    [data-fs-product-details] {
-      --fs-product-details-vertical-spacing              : var(--fs-spacing-5);
-      --fs-product-details-horizontal-spacing            : var(--fs-spacing-6);
-
-      [data-fs-product-details-section] {
-        padding-right: 0;
-        padding-left: 0;
-        border-right: none;
-        border-left: none;
-      }
-    }
-
-    [data-fs-sku-selector] {
-      --fs-sku-selector-image-border-radius                : var(--fs-border-radius-circle);
-      --fs-sku-selector-option-border-radius               : var(--fs-border-radius-circle);
-      --fs-sku-selector-option-border-color                : var(--fs-border-color);
-    }
-
-    [data-fs-image-gallery] > [data-fs-image] {
-      object-fit: cover;
-
-      @include media("<notebook") {
-        height: 280px;
-      }
-    }
-
-    [data-fs-image-gallery-selector-control-button] {
-      --fs-image-gallery-selector-control-bkg-color        : var(--fs-color-neutral-7);
-      --fs-image-gallery-selector-control-shadow           : none;
-
-      [data-fs-button-wrapper] {
-        color: var(--fs-color-text-inverse);
-      }
-
-      &:hover [data-fs-button-wrapper] {
-        background-color: var(--fs-image-gallery-selector-control-bkg-color);
-      }
-    }
-
-    ////////////////////
-    // PLP
-    ////////////////////
-
-    [data-fs-hero-variant="secondary"] {
-      --fs-hero-light-bkg-color                            : transparent;
-      --fs-hero-secondary-title-size                       : var(--fs-text-size-9);
-      --fs-hero-secondary-image-height-mobile              : unset;
-      --fs-hero-secondary-image-height-desktop             : unset;
-
-      [data-fs-hero-image] { display: none; }
-      [data-fs-hero-wrapper] { margin: 0; }
-      [data-fs-hero-subtitle] { color: var(--fs-color-text-light); }
-      [data-fs-hero-title] { letter-spacing: 1.1; }
-    }
-
-    [data-fs-product-grid] {
-      --fs-product-grid-gap-mobile                         : var(--fs-grid-gap-2);
-      --fs-product-grid-gap-desktop                        : var(--fs-spacing-6);
-    }
-
-    [data-fs-product-listing] {
-      [data-fs-product-listing-results],
-      [data-fs-product-listing-results-count] { background-color: transparent; }
-
-      [data-fs-product-listing-results] {
-        --padding: var(--fs-grid-gap-2);
-      }
-
-      [data-fs-product-listing-results-count] {
-        color: var(--fs-color-text-light);
-      }
-    }
-
-    [data-fs-product-listing-content-grid] {
-      column-gap: var(--fs-spacing-6);
-
-      @include media(">=notebook") { row-gap: var(--fs-spacing-3); }
-    }
-
-    [data-fs-filter] {
-      --fs-filter-accordion-button-padding-right-notebook     : 0;
-      --fs-filter-accordion-item-panel-padding-right-notebook : 0;
-      --fs-filter-accordion-border-radius-notebook            : 0;
-      --fs-filter-title-margin-bottom                         : var(--fs-spacing-3);
-
-      [data-fs-filter-title] {
-        font-weight: var(--fs-text-weight-semibold);
-      }
-
-      [data-fs-filter-accordion] {
-        border-right: 0;
-        border-bottom: 0;
-        border-left: 0;
-      }
-    }
-
-    [data-fs-slider] {
-      --fs-slider-thumb-bkg-color                          : var(--fs-color-neutral-7);
-    }
-
-    ////////////////////
-    // Cart Sidebar
-    ////////////////////
-
-    [data-fs-cart-sidebar] {
-      --fs-cart-sidebar-bkg-color                          : var(--fs-color-neutral-0);
-      --fs-cart-sidebar-footer-box-shadow                  : none;
-      --fs-slide-over-partial-max-width-notebook           : 480px;
-
-      @include media(">=notebook") {
-        --fs-cart-sidebar-list-padding                       : var(--fs-spacing-3) var(--fs-spacing-7);
-        --fs-slide-over-header-padding                       : var(--fs-spacing-2) var(--fs-spacing-7);
-      }
-
-      [data-fs-empty-state] {
-        --fs-empty-state-bkg-color-default                   : var(--fs-color-neutral-0);
-      }
-
-      [data-fs-slide-over-header] [data-fs-button-wrapper] {
-        color: var(--fs-color-text);
-      }
-    }
-
-    [data-fs-cart-sidebar-footer] {
-      @include media(">=notebook") {
-        padding: 0 var(--fs-spacing-7) var(--fs-spacing-4);
-      }
-
-      [data-fs-order-summary] {
-        --fs-order-summary-row-gap                           : var(--fs-grid-gap-0);
-
-        padding-top: var(--fs-spacing-4);
-        margin-bottom: var(--fs-spacing-3);
-        border-top: var(--fs-border-width) solid var(--fs-border-color);
-      }
-    }
-
-    [data-fs-cart-item] {
-      --fs-cart-item-border-width : 0;
-
-      [data-fs-cart-item-content] {
-        padding-bottom: var(--fs-spacing-4);
-        padding-left: 0;
-      }
-
-      [data-quantity-selector-input] {
-        border-color: var(--fs-border-color);
-        border-top-left-radius: var(--fs-border-radius-pill);
-        border-top-right-radius: var(--fs-border-radius-pill);
-      }
-    }
-
-    [data-fs-cart-sidebar-list] li {
-      padding-bottom: var(--fs-spacing-4);
-      &:not(:only-child) { border-bottom: var(--fs-border-width) solid var(--fs-border-color); }
-    }
-
-    ///////////////////
-
-    .text__title-section {
-      font-size: var(--fs-text-size-6);
-      font-weight: var(--fs-text-weight-semibold);
-      letter-spacing: -1.2px;
+    // SECTION
+    .section {
+      --fs-section-padding: var(--fs-spacing-3) 0;
+      --fs-section-title-color: var(--fs-color-main-3);
+      --fs-section-title-size: var(--fs-text-size-5);
+      --fs-section-title-weight: var(--fs-text-weight-bold);
+      --fs-section-title-margin-bottom: var(--fs-spacing-3);
     }
   }
-
-  .section-banner + .section-newsletter { background-color: var(--fs-color-neutral-bkg); }
 }
